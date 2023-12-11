@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --red: #ff0002;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.flag {
+  background-color: var(--red);
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
+}
+
+.cross {
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cross1 {
+  height: 3.75rem;
+  width: 12.5rem;
+}
+
+.cross2 {
+  height: 12.5rem;
+  width: 3.75rem;
+}
