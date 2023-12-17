@@ -1,0 +1,52 @@
+:root {
+  --bg-word: #5134ff;
+  --white: #fff;
+  --ff-default: 'Roboto', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: var(--ff-default);
+  font-size: 1.2rem;
+}
+
+.header::after {
+  content: '';
+  background-color: var(--bg-word);
+  border-radius: 0.4rem;
+  color: var(--white);
+  padding: 10px;
+  margin-left: 3px;
+  animation: animate 4s infinite;
+}
+
+@keyframes animate {
+  0% {
+    content: 'Scrimba';
+  }
+  25% {
+    content: 'Exercise';
+  }
+  50% {
+    content: 'Dogs';
+  }
+  75% {
+    content: 'Coding';
+  }
+  100% {
+    content: 'Scrimba';
+  }
+}
