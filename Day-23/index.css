@@ -1,0 +1,72 @@
+:root {
+  --toggle-switch-bg: #232428;
+  --toggle-border: #232428;
+  --toggle-bg: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #808080;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: var(--toggle-bg);
+  border-radius: 16px;
+  border: 1px solid var(--toggle-border);
+  width: 58px;
+  height: 33px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before,
+.toggle-switch:after {
+  content: '';
+}
+.toggle-switch:before {
+  display: block;
+  background: var(--toggle-switch-bg);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+
+.toggle-input:checked + .toggle-switch {
+  background: var(--toggle-bg);
+}
+.toggle-input:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-input {
+  position: absolute;
+  visibility: hidden;
+}
